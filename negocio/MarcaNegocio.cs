@@ -38,5 +38,39 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+
+        public Marca BuscarMarca(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Marca marca = null;
+
+            try
+            {
+                datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS WHERE Id = @Id");
+                datos.setearParametros("@Id", id);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    marca = new Marca();
+                    marca.Id = (int)datos.Lector["Id"];
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        marca.Descripcion = (string)datos.Lector["Descripcion"];
+                }
+
+                return marca; // Si no encontró nada, devuelve null
+            }
+            catch (Exception ex)
+            {
+                throw ex; // O podrías loguear el error y devolver null
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
+
+   
 }

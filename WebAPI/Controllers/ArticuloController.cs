@@ -53,7 +53,54 @@ namespace WebAPI.Controllers
             try
             {
                 //seteo el negocio
-                var negocio = new ArticuloNegocio();
+                var articuloNegocio = new ArticuloNegocio();
+                var marcaNegocio = new MarcaNegocio();
+                var categoriaNegocio = new CategoriaNegocio();
+
+                //Si no viene en el Body un ARTICULODTO
+                if (nuevoArticuloDto == null)
+                {
+                    var response = new ApiResponse(HttpStatusCode.BadRequest, "No se recibieron datos.");
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+
+                //valido marca y categoria Ingresadas
+                Marca marcaIngresada = marcaNegocio.BuscarMarca(nuevoArticuloDto.MarcaId);
+                Categoria categoriaIngresada = categoriaNegocio.buscarCategoria(nuevoArticuloDto.CategoriaId);
+
+                //si no existen retorno 400 Bad Request
+                if(marcaIngresada == null)
+                {
+                    var response = new ApiResponse(HttpStatusCode.BadRequest, "Marca Ingresada No Existe.");
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+
+                if(categoriaIngresada == null)
+                {
+                    var response = new ApiResponse(HttpStatusCode.BadRequest, "Categoria Ingresada No Existe.");
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+
+
+                // Validaciones de formato y tipo
+                if (string.IsNullOrWhiteSpace(nuevoArticuloDto.CodigoArticulo))
+                    return Request.CreateResponse(HttpStatusCode.BadRequest,
+                        new ApiResponse(HttpStatusCode.BadRequest, "El código de artículo es obligatorio."));
+
+                if (string.IsNullOrWhiteSpace(nuevoArticuloDto.Nombre))
+                    return Request.CreateResponse(HttpStatusCode.BadRequest,
+                        new ApiResponse(HttpStatusCode.BadRequest, "El nombre es obligatorio."));
+
+                if (string.IsNullOrWhiteSpace(nuevoArticuloDto.Descripcion))
+                    return Request.CreateResponse(HttpStatusCode.BadRequest,
+                        new ApiResponse(HttpStatusCode.BadRequest, "La descripción es obligatoria."));
+
+                //  Validación de precio
+                if (nuevoArticuloDto.Precio <= 0)
+                    return Request.CreateResponse(HttpStatusCode.BadRequest,
+                        new ApiResponse(HttpStatusCode.BadRequest, "El precio debe ser mayor que 0."));
+
+
 
                 //creo el articulo nuevo a partir del dto recibido
                 Articulo articuloNuevo = new Articulo
@@ -67,10 +114,14 @@ namespace WebAPI.Controllers
                 };
 
                 //agrego el articulo
-                 negocio.agregarArticulo(articuloNuevo);
+                int idGenerado = articuloNegocio.agregarArticulo(articuloNuevo);
+
+                articuloNuevo.Id = idGenerado; // Asigno el ID generado al artículo nuevo
+                articuloNuevo.Marca = marcaIngresada; // Asigno la marca completa
+                articuloNuevo.Categoria = categoriaIngresada; // Asigno la categoría completa
 
                 // Retornar 200 OK con el artículo creado
-                var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículo Creado con Exito.", nuevoArticuloDto);
+                var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículo Creado con Exito.", articuloNuevo);
                 return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
                
             }

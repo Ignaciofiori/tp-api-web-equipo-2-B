@@ -42,5 +42,35 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+        public Categoria buscarCategoria(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Categoria categoria = null;
+
+            try
+            {
+                datos.setearConsulta("SELECT Id, Descripcion FROM CATEGORIAS WHERE Id = @Id");
+                datos.setearParametros("@Id", id);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    categoria = new Categoria();
+                    categoria.Id = (int)datos.Lector["Id"];
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        categoria.Descripcion = (string)datos.Lector["Descripcion"];
+                }
+
+                return categoria; // si no encuentra nada, devuelve null
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
