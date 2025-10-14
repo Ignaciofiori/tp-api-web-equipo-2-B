@@ -12,11 +12,30 @@ namespace WebAPI.Controllers
     public class ArticuloController : ApiController
     {
         // GET: api/Articulo
-        public List<Articulo> Get()
+      public HttpResponseMessage Get()
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            return negocio.ListarArticulos();
+            try
+            {
+                var negocio = new ArticuloNegocio();
+                var lista = negocio.ListarArticulos();
+
+                if (lista == null || lista.Count == 0)
+                {
+                    var response = new ApiResponse(HttpStatusCode.NotFound, "No se encontraron artículos.");
+                    return Request.CreateResponse(HttpStatusCode.NotFound, response);
+                }
+
+                var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículos recuperados con éxito.", lista);
+                return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
+            }
+            catch (Exception ex)
+            {
+                var response = new ApiResponse(HttpStatusCode.InternalServerError, "Momentaneamente Fuera de Servicio.");
+                return Request.CreateResponse(HttpStatusCode.InternalServerError,
+                    response);
+            }
         }
+
 
         // GET: api/Articulo/5
         public string Get(int id)
