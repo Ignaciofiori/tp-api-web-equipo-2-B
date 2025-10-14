@@ -305,11 +305,11 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\tp-winform-equipo-2-B\TPWinforms_equipo-2B\modelo\modelo.csproj">
+    <ProjectReference Include="..\modelo\modelo.csproj">
       <Project>{8bf41cab-aeea-4c90-b68f-bd666cc5e348}</Project>
       <Name>modelo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\tp-winform-equipo-2-B\TPWinforms_equipo-2B\negocio\negocio.csproj">
+    <ProjectReference Include="..\negocio\negocio.csproj">
       <Project>{4f6facd0-6676-4fc2-8b9c-eb2f545411f9}</Project>
       <Name>negocio</Name>
     </ProjectReference>

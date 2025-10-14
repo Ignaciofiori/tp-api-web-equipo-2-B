@@ -1,0 +1,12 @@
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\bin\Debug\modelo.dll
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\bin\Debug\modelo.pdb
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\obj\Debug\modelo.csproj.AssemblyReference.cache
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\obj\Debug\modelo.dll
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\tp-web-equipo-2-B\modelo\obj\Debug\modelo.pdb
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\bin\Debug\modelo.dll
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\bin\Debug\modelo.pdb
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.csproj.AssemblyReference.cache
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.dll
+C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.pdb
