@@ -19,17 +19,20 @@ namespace WebAPI.Controllers
                 var negocio = new ArticuloNegocio();
                 var lista = negocio.ListarArticulos();
 
+                // Verificar si la lista esta vacia y retornar 404 si es asi
                 if (lista == null || lista.Count == 0)
                 {
                     var response = new ApiResponse(HttpStatusCode.NotFound, "No se encontraron artículos.");
                     return Request.CreateResponse(HttpStatusCode.NotFound, response);
                 }
 
+                // Retornar 200 OK con la lista de artículos
                 var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículos recuperados con éxito.", lista);
                 return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
             }
             catch (Exception ex)
             {
+                // Manejar excepciones y retornar 500 Internal Server Error
                 var response = new ApiResponse(HttpStatusCode.InternalServerError, "Momentaneamente Fuera de Servicio.");
                 return Request.CreateResponse(HttpStatusCode.InternalServerError,
                     response);
