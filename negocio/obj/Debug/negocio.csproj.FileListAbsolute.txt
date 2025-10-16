@@ -16,15 +16,6 @@ C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\negocio\obj
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\negocio\obj\Debug\negocio.csproj.Up2Date
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\negocio\obj\Debug\negocio.dll
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\negocio\obj\Debug\negocio.pdb
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.dll
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.pdb
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\modelo.dll
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\modelo.pdb
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.Up2Date
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.dll
-C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.pdb
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.dll
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.pdb
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\bin\Debug\modelo.dll
@@ -34,3 +25,12 @@ C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.CoreComp
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.Up2Date
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.dll
 C:\GITHUB TP III\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.pdb
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.dll
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\negocio.pdb
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\modelo.dll
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\bin\Debug\modelo.pdb
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.dll
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\negocio\obj\Debug\negocio.pdb

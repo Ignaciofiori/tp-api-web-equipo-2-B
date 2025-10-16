@@ -61,7 +61,10 @@ namespace negocio
 
             try
             {
-                connection.Open();
+                if (connection.State != System.Data.ConnectionState.Open)
+                {
+                    connection.Open();
+                }
                 command.ExecuteNonQuery();
             }
             catch (Exception)
@@ -73,6 +76,11 @@ namespace negocio
         public void setearParametros(string parametro, object valor)
         {
             command.Parameters.AddWithValue(parametro, valor);
+        }
+
+        public void limpiarParametros()
+        {
+            command.Parameters.Clear();
         }
     }
 }

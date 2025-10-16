@@ -261,9 +261,15 @@ namespace negocio
 
         public void eliminarFisico(int d)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM IMAGENES WHERE IdArticulo = @Id");
+                datos.setearParametros("@Id", d);
+                datos.ejecutarAccion();
+
+                datos.limpiarParametros();
+
                 datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
                 datos.setearParametros("@Id", d);
                 datos.ejecutarAccion();
@@ -271,6 +277,10 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
