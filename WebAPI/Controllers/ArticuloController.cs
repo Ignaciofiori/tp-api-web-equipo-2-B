@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
                 var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículos recuperados con éxito.", lista);
                 return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepciones y retornar 500 Internal Server Error
                 var response = new ApiResponse(HttpStatusCode.InternalServerError, "Momentaneamente Fuera de Servicio.");
@@ -126,7 +126,7 @@ namespace WebAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepciones y retornar 500 Internal Server Error
                 var response = new ApiResponse(HttpStatusCode.InternalServerError, "Error al Crear el Articulo.");
@@ -204,7 +204,7 @@ namespace WebAPI.Controllers
                 var responseSuccess = new ApiResponse(HttpStatusCode.Created, "Artículo Modificado con Éxito.", articuloAActualizar);
                 return Request.CreateResponse(HttpStatusCode.Created, responseSuccess);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 var response = new ApiResponse(HttpStatusCode.InternalServerError, "Error al Modificar el Articulo.");
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, response);
@@ -251,7 +251,7 @@ namespace WebAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.Created,
                     new ApiResponse(HttpStatusCode.Created, "Imagenes Agregadas con Exito"));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError,
                     new ApiResponse(HttpStatusCode.InternalServerError, "Error al agregar las imágenes."));
@@ -259,9 +259,69 @@ namespace WebAPI.Controllers
 
         }
 
-        // DELETE: api/Articulo/5
-        public void Delete(int id)
+        // DELETE: api/Articulo/5 sin body
+        [Route("{id}")]
+        [HttpDelete]
+        public HttpResponseMessage EliminarPorID(int id)
         {
+            try
+            {
+                if (id <= 0)
+                {
+                    var response = new ApiResponse(HttpStatusCode.BadRequest, "El ID del artículo a eliminar no es válido.");
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+                var articuloNegocio = new ArticuloNegocio();
+                Articulo articuloExistente = articuloNegocio.BuscarPorId(id);
+
+                if (articuloExistente == null)
+                {
+                    var response = new ApiResponse(HttpStatusCode.NotFound, $"El articulo con ID {id} no fue encontrado para eliminar.");
+                    return Request.CreateResponse(HttpStatusCode.NotFound, response);
+                }
+                articuloNegocio.eliminarFisico(id);
+                var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Articulo eliminado con exito.");
+                return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
+            }
+            catch (Exception)
+            {
+                var response = new ApiResponse(HttpStatusCode.InternalServerError, "Error al eliminar el articulo.");
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, response);
+            }
+        }
+
+        //Get busqueda de articulo por id
+        // GET : api/Articulo/5
+        [Route("{id}")]
+        [HttpGet]
+        public HttpResponseMessage BuscarPorId(int id)
+        {
+            try
+            {
+                if (id <= 0)
+                {
+                    var response = new ApiResponse(HttpStatusCode.BadRequest, "El ID del artículo no es válido.");
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                }
+
+                var articuloNegocio = new ArticuloNegocio();
+                var articulo = articuloNegocio.BuscarPorId(id);
+
+                if(articulo == null)
+                {
+                    var response = new ApiResponse(HttpStatusCode.NotFound, $"El artículo con ID {id} no fue encontrado.");
+                    return Request.CreateResponse(HttpStatusCode.NotFound, response);
+                }
+
+                var responseSuccess = new ApiResponse(HttpStatusCode.OK, "Artículo encontrado con exito.", articulo);
+                return Request.CreateResponse(HttpStatusCode.OK, responseSuccess);
+            }
+
+            catch (Exception)
+            {
+                var response = new ApiResponse(HttpStatusCode.InternalServerError, "Error al buscar el artículo.");
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, response);
+            }
         }
     }
 }
