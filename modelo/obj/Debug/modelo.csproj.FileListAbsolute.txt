@@ -10,3 +10,9 @@ C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.dll
 C:\Users\nacho\Desktop\Work\UTN\Programacion3\TPs\TPApiWeb-Equipo-2B\modelo\obj\Debug\modelo.pdb
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\bin\Debug\modelo.dll
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\bin\Debug\modelo.pdb
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\obj\Debug\modelo.csproj.AssemblyReference.cache
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\obj\Debug\modelo.dll
+C:\Users\piper\OneDrive\Escritorio\UTN\PROG III\GIT\Trabajo_Practico_APIs\tp-api-web-equipo-2-B\modelo\obj\Debug\modelo.pdb
